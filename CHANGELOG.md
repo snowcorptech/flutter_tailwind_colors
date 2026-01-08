@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.0.5] - 2026-01-02
+### Added
+- Comprehensive API documentation (meets pub.dev 20% requirement)
+- Example app demonstrating package usage with version switching
+- Library-level documentation for all color palette files
+- Enhanced class documentation for TWColors and TailwindColorManager
+
+### Changed
+- Improved documentation coverage across all public API elements
+- Added example directory with working demo application
+
 ## [0.0.4] - 2026-01-02
 ### Added
 - Support for all Tailwind CSS versions (v2.0, v3.0, v3.1, v3.2, v3.3, v3.4, v4.0)

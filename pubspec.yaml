@@ -1,6 +1,6 @@
 name: flutter_tailwind_colors
 description: A Flutter package that provides the complete set of Tailwind CSS colors with customizable shades for use in Flutter applications.
-version: 0.0.4
+version: 0.0.5
 homepage: https://github.com/snowcorporate/flutter_tailwind_colors
 
 environment:

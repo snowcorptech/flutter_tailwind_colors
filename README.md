@@ -21,7 +21,7 @@ All Tailwind CSS versions are now fully supported! You can switch between any ve
 
 ```yaml
 dependencies:
-    flutter_tailwind_colors: ^0.0.4
+    flutter_tailwind_colors: ^0.0.5
 ```
 
 2. Get the package via your IDE or via the command line by typing:

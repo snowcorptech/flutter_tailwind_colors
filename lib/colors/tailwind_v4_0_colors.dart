@@ -1,3 +1,12 @@
+/// Tailwind CSS v4.0 color palette definitions.
+///
+/// This library provides the complete set of Tailwind CSS v4.0 color palettes
+/// as MaterialColor objects for use in Flutter applications.
+///
+/// Note: v4.0 uses OKLCH color space in the actual Tailwind implementation.
+/// This file provides RGB/hex equivalents for Flutter compatibility.
+library tailwind_v4_0_colors;
+
 import 'package:flutter/material.dart';
 
 /// Tailwind CSS v4.0 color palette

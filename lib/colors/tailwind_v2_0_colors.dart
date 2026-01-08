@@ -1,3 +1,12 @@
+/// Tailwind CSS v2.0 color palette definitions.
+///
+/// This library provides the complete set of Tailwind CSS v2.0 color palettes
+/// as MaterialColor objects for use in Flutter applications.
+///
+/// Note: v2.0 used different naming conventions (blueGray, coolGray, trueGray, warmGray)
+/// compared to later versions. These are mapped to the v3+ names for compatibility.
+library tailwind_v2_0_colors;
+
 import 'package:flutter/material.dart';
 
 /// Tailwind CSS v2.0 color palette

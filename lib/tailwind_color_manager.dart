@@ -8,8 +8,19 @@ import 'colors/tailwind_v3_3_colors.dart';
 import 'colors/tailwind_v3_4_colors.dart';
 import 'colors/tailwind_v4_0_colors.dart';
 
-/// Manages Tailwind CSS color palettes for different versions
+/// Manages Tailwind CSS color palettes for different versions.
+///
+/// This class provides a centralized way to access color palettes from different
+/// Tailwind CSS versions. It maintains the current version state and provides
+/// methods to switch between versions and retrieve colors.
+///
+/// The version switching is global - setting a version affects all color access
+/// throughout the application.
 class TailwindColorManager {
+  /// Private constructor to prevent instantiation.
+  ///
+  /// This class is meant to be used statically only.
+  TailwindColorManager._();
   static TailwindVersion _currentVersion = TailwindVersion.v4_0;
 
   /// Set the current Tailwind CSS version

@@ -1,3 +1,9 @@
+/// Tailwind CSS v3.4 color palette definitions.
+///
+/// This library provides the complete set of Tailwind CSS v3.4 color palettes
+/// as MaterialColor objects for use in Flutter applications.
+library tailwind_v3_4_colors;
+
 import 'package:flutter/material.dart';
 
 /// Tailwind CSS v3.4 color palette

@@ -1,3 +1,22 @@
+/// Tailwind CSS Colors for Flutter
+///
+/// This library provides Tailwind CSS color palettes for Flutter applications,
+/// supporting multiple Tailwind CSS versions (v2.0 through v4.0) with easy version switching.
+///
+/// The package exposes colors in a way similar to Material colors, making it easy
+/// to use Tailwind colors in Flutter themes and widgets.
+///
+/// Example usage:
+/// ```dart
+/// import 'package:flutter_tailwind_colors/flutter_tailwind_colors.dart';
+///
+/// // Default (v4.0)
+/// Color primaryColor = TWColors.emerald.shade400;
+///
+/// // Switch to a different version
+/// TWColors.setVersion(TailwindVersion.v3_4);
+/// Color v34Color = TWColors.emerald.shade400;
+/// ```
 library flutter_tailwind_colors;
 
 import 'package:flutter/material.dart';
@@ -25,6 +44,10 @@ export 'tailwind_version.dart';
 /// Color v34Color = TWColors.emerald.shade400;
 /// ```
 class TWColors {
+  /// Private constructor to prevent instantiation.
+  ///
+  /// This class is meant to be used statically only.
+  TWColors._();
   /// Set the Tailwind CSS version to use globally.
   /// 
   /// **Important:** This affects ALL color access throughout your entire application.

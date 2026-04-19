@@ -7,6 +7,8 @@ import 'colors/tailwind_v3_2_colors.dart';
 import 'colors/tailwind_v3_3_colors.dart';
 import 'colors/tailwind_v3_4_colors.dart';
 import 'colors/tailwind_v4_0_colors.dart';
+import 'colors/tailwind_v4_1_colors.dart';
+import 'colors/tailwind_v4_2_colors.dart';
 
 /// Manages Tailwind CSS color palettes for different versions.
 ///
@@ -21,12 +23,12 @@ class TailwindColorManager {
   ///
   /// This class is meant to be used statically only.
   TailwindColorManager._();
-  static TailwindVersion _currentVersion = TailwindVersion.v4_0;
+  static TailwindVersion _currentVersion = TailwindVersion.v4_2;
 
   /// Set the current Tailwind CSS version
   static void setVersion(TailwindVersion version) {
     if (version == TailwindVersion.latest) {
-      _currentVersion = TailwindVersion.v4_0;
+      _currentVersion = TailwindVersion.v4_2;
     } else {
       _currentVersion = version;
     }
@@ -47,10 +49,9 @@ class TailwindColorManager {
   }
 
   static Map<String, MaterialColor> _getPalette(TailwindVersion version) {
-    // Normalize latest to v4_0
-    final normalizedVersion = version == TailwindVersion.latest
-        ? TailwindVersion.v4_0
-        : version;
+    // Normalize latest to v4_2
+    final normalizedVersion =
+        version == TailwindVersion.latest ? TailwindVersion.v4_2 : version;
 
     switch (normalizedVersion) {
       case TailwindVersion.v2_0:
@@ -234,8 +235,62 @@ class TailwindColorManager {
           'pink': TailwindV40Colors.pink,
           'rose': TailwindV40Colors.rose,
         };
+      case TailwindVersion.v4_1:
+        return {
+          'slate': TailwindV41Colors.slate,
+          'gray': TailwindV41Colors.gray,
+          'zinc': TailwindV41Colors.zinc,
+          'neutral': TailwindV41Colors.neutral,
+          'stone': TailwindV41Colors.stone,
+          'red': TailwindV41Colors.red,
+          'orange': TailwindV41Colors.orange,
+          'amber': TailwindV41Colors.amber,
+          'yellow': TailwindV41Colors.yellow,
+          'lime': TailwindV41Colors.lime,
+          'green': TailwindV41Colors.green,
+          'emerald': TailwindV41Colors.emerald,
+          'teal': TailwindV41Colors.teal,
+          'cyan': TailwindV41Colors.cyan,
+          'sky': TailwindV41Colors.sky,
+          'blue': TailwindV41Colors.blue,
+          'indigo': TailwindV41Colors.indigo,
+          'violet': TailwindV41Colors.violet,
+          'purple': TailwindV41Colors.purple,
+          'fuchsia': TailwindV41Colors.fuchsia,
+          'pink': TailwindV41Colors.pink,
+          'rose': TailwindV41Colors.rose,
+        };
+      case TailwindVersion.v4_2:
+        return {
+          'slate': TailwindV42Colors.slate,
+          'gray': TailwindV42Colors.gray,
+          'zinc': TailwindV42Colors.zinc,
+          'neutral': TailwindV42Colors.neutral,
+          'stone': TailwindV42Colors.stone,
+          'red': TailwindV42Colors.red,
+          'orange': TailwindV42Colors.orange,
+          'amber': TailwindV42Colors.amber,
+          'yellow': TailwindV42Colors.yellow,
+          'lime': TailwindV42Colors.lime,
+          'green': TailwindV42Colors.green,
+          'emerald': TailwindV42Colors.emerald,
+          'teal': TailwindV42Colors.teal,
+          'cyan': TailwindV42Colors.cyan,
+          'sky': TailwindV42Colors.sky,
+          'blue': TailwindV42Colors.blue,
+          'indigo': TailwindV42Colors.indigo,
+          'violet': TailwindV42Colors.violet,
+          'purple': TailwindV42Colors.purple,
+          'fuchsia': TailwindV42Colors.fuchsia,
+          'pink': TailwindV42Colors.pink,
+          'rose': TailwindV42Colors.rose,
+          'taupe': TailwindV42Colors.taupe,
+          'mauve': TailwindV42Colors.mauve,
+          'mist': TailwindV42Colors.mist,
+          'olive': TailwindV42Colors.olive,
+        };
       case TailwindVersion.latest:
-        return _getPalette(TailwindVersion.v4_0);
+        return _getPalette(TailwindVersion.v4_2);
     }
   }
 }

@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 
 void main() {
   group('TWColors', () {
-    test('default version is v4.0', () {
-      expect(TWColors.version, TailwindVersion.v4_0);
+    test('default version is v4.2', () {
+      expect(TWColors.version, TailwindVersion.v4_2);
     });
 
     test('can switch versions', () {
@@ -14,6 +14,12 @@ void main() {
 
       TWColors.setVersion(TailwindVersion.v3_4);
       expect(TWColors.version, TailwindVersion.v3_4);
+
+      TWColors.setVersion(TailwindVersion.v4_1);
+      expect(TWColors.version, TailwindVersion.v4_1);
+
+      TWColors.setVersion(TailwindVersion.v4_2);
+      expect(TWColors.version, TailwindVersion.v4_2);
     });
 
     test('colors are MaterialColor instances', () {
@@ -45,6 +51,10 @@ void main() {
       expect(TWColors.zinc, isNotNull);
       expect(TWColors.neutral, isNotNull);
       expect(TWColors.stone, isNotNull);
+      expect(TWColors.taupe, isNotNull);
+      expect(TWColors.mauve, isNotNull);
+      expect(TWColors.mist, isNotNull);
+      expect(TWColors.olive, isNotNull);
       expect(TWColors.red, isNotNull);
       expect(TWColors.orange, isNotNull);
       expect(TWColors.amber, isNotNull);
@@ -100,12 +110,26 @@ void main() {
       expect(TWColors.version, TailwindVersion.v4_0);
       expect(TWColors.slate, isA<MaterialColor>());
 
+      // Test v4.1
+      TWColors.setVersion(TailwindVersion.v4_1);
+      expect(TWColors.version, TailwindVersion.v4_1);
+      expect(TWColors.slate, isA<MaterialColor>());
+
+      // Test v4.2
+      TWColors.setVersion(TailwindVersion.v4_2);
+      expect(TWColors.version, TailwindVersion.v4_2);
+      expect(TWColors.slate, isA<MaterialColor>());
+      expect(TWColors.taupe, isA<MaterialColor>());
+      expect(TWColors.mauve, isA<MaterialColor>());
+      expect(TWColors.mist, isA<MaterialColor>());
+      expect(TWColors.olive, isA<MaterialColor>());
+
       // Test latest
       TWColors.setVersion(TailwindVersion.latest);
-      expect(TWColors.version, TailwindVersion.v4_0);
+      expect(TWColors.version, TailwindVersion.v4_2);
 
       // Reset to default
-      TWColors.setVersion(TailwindVersion.v4_0);
+      TWColors.setVersion(TailwindVersion.v4_2);
     });
   });
 }

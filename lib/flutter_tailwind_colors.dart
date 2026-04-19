@@ -1,7 +1,7 @@
 /// Tailwind CSS Colors for Flutter
 ///
 /// This library provides Tailwind CSS color palettes for Flutter applications,
-/// supporting multiple Tailwind CSS versions (v2.0 through v4.0) with easy version switching.
+/// supporting multiple Tailwind CSS versions (v2.0 through v4.2) with easy version switching.
 ///
 /// The package exposes colors in a way similar to Material colors, making it easy
 /// to use Tailwind colors in Flutter themes and widgets.
@@ -10,7 +10,7 @@
 /// ```dart
 /// import 'package:flutter_tailwind_colors/flutter_tailwind_colors.dart';
 ///
-/// // Default (v4.0)
+/// // Default (v4.2)
 /// Color primaryColor = TWColors.emerald.shade400;
 ///
 /// // Switch to a different version
@@ -31,14 +31,14 @@ export 'tailwind_version.dart';
 ///  support@snowcorp.org
 
 /// Tailwind CSS Colors for Flutter
-/// 
-/// Supports multiple Tailwind CSS versions. By default, uses Tailwind CSS v4.0 colors.
-/// 
+///
+/// Supports multiple Tailwind CSS versions. By default, uses Tailwind CSS v4.2 colors.
+///
 /// Example usage:
 /// ```dart
-/// // Default (v4.0)
+/// // Default (v4.2)
 /// Color primaryColor = TWColors.emerald.shade400;
-/// 
+///
 /// // Switch to a different version
 /// TWColors.setVersion(TailwindVersion.v3_4);
 /// Color v34Color = TWColors.emerald.shade400;
@@ -48,15 +48,16 @@ class TWColors {
   ///
   /// This class is meant to be used statically only.
   TWColors._();
+
   /// Set the Tailwind CSS version to use globally.
-  /// 
+  ///
   /// **Important:** This affects ALL color access throughout your entire application.
   /// It's recommended to set the version once during app initialization (e.g., in `main()`).
-  /// 
+  ///
   /// ```dart
   /// // Set version once at app startup
   /// void main() {
-  ///   TWColors.setVersion(TailwindVersion.v4_0);
+  ///   TWColors.setVersion(TailwindVersion.v4_2);
   ///   runApp(MyApp());
   /// }
   /// ```
@@ -178,6 +179,26 @@ class TWColors {
   /// {@end-tool}
   ///
   static MaterialColor get stone => TailwindColorManager.getColor('stone');
+
+  /// The taupe primary color and swatch.
+  ///
+  /// Available in Tailwind CSS v4.2 and later.
+  static MaterialColor get taupe => TailwindColorManager.getColor('taupe');
+
+  /// The mauve primary color and swatch.
+  ///
+  /// Available in Tailwind CSS v4.2 and later.
+  static MaterialColor get mauve => TailwindColorManager.getColor('mauve');
+
+  /// The mist primary color and swatch.
+  ///
+  /// Available in Tailwind CSS v4.2 and later.
+  static MaterialColor get mist => TailwindColorManager.getColor('mist');
+
+  /// The olive primary color and swatch.
+  ///
+  /// Available in Tailwind CSS v4.2 and later.
+  static MaterialColor get olive => TailwindColorManager.getColor('olive');
 
   /// The red primary color and swatch.
   ///

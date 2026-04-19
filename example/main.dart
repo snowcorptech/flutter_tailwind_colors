@@ -3,7 +3,7 @@ import 'package:flutter_tailwind_colors/flutter_tailwind_colors.dart';
 
 void main() {
   // Optionally set the Tailwind version at app startup
-  // TWColors.setVersion(TailwindVersion.v4_0); // This is the default
+  // TWColors.setVersion(TailwindVersion.v4_2); // This is the default
   runApp(const MyApp());
 }
 
@@ -43,7 +43,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  TailwindVersion _selectedVersion = TailwindVersion.v4_0;
+  TailwindVersion _selectedVersion = TailwindVersion.v4_2;
 
   @override
   Widget build(BuildContext context) {
@@ -311,8 +311,12 @@ class _MyHomePageState extends State<MyHomePage> {
         return 'v3.4';
       case TailwindVersion.v4_0:
         return 'v4.0';
+      case TailwindVersion.v4_1:
+        return 'v4.1';
+      case TailwindVersion.v4_2:
+        return 'v4.2';
       case TailwindVersion.latest:
-        return 'Latest (v4.0)';
+        return 'Latest (v4.2)';
     }
   }
 
@@ -349,4 +353,3 @@ class _MyHomePageState extends State<MyHomePage> {
     return luminance > 0.5 ? Colors.black : Colors.white;
   }
 }
-

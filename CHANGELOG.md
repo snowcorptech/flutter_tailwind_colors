@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.0.7] - 2026-04-19
+### Fixed
+- Updated the example app's version switch to handle `v4.1` and `v4.2`
+- Updated the example app's `latest` label to display `v4.2`
+
+## [0.0.6] - 2026-04-19
+### Added
+- Tailwind CSS v4.1 support
+- Tailwind CSS v4.2 support
+- New Tailwind v4.2 color palettes: taupe, mauve, mist, and olive
+
+### Changed
+- Default Tailwind version updated from v4.0 to v4.2
+- `TailwindVersion.latest` now resolves to v4.2
+- Documentation and tests updated for the new version support
+
 ## [0.0.5] - 2026-01-02
 ### Added
 - Comprehensive API documentation (meets pub.dev 20% requirement)

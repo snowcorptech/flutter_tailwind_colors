@@ -20,9 +20,15 @@ enum TailwindVersion {
   /// Tailwind CSS v3.4
   v3_4,
 
-  /// Tailwind CSS v4.0 (default)
+  /// Tailwind CSS v4.0
   v4_0,
 
-  /// Latest version (currently v4.0)
+  /// Tailwind CSS v4.1
+  v4_1,
+
+  /// Tailwind CSS v4.2 (default)
+  v4_2,
+
+  /// Latest version (currently v4.2)
   latest,
 }

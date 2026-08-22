@@ -7,13 +7,21 @@ Dart package exposing Tailwind Colors to be used in Flutter in a way similar to 
 
 - Tailwind CSS v2.0 ✅
 - Tailwind CSS v3.0 ✅
+
+Dart package exposing Tailwind Colors to be used in Flutter in a way similar to the Material colors. Supports multiple Tailwind CSS versions with easy version switching.
+
+## Supported Versions
+
+- Tailwind CSS v2.0 ✅
+- Tailwind CSS v3.0 ✅
 - Tailwind CSS v3.1 ✅
 - Tailwind CSS v3.2 ✅
 - Tailwind CSS v3.3 ✅
 - Tailwind CSS v3.4 ✅
 - Tailwind CSS v4.0 ✅
 - Tailwind CSS v4.1 ✅
-- Tailwind CSS v4.2 ✅ (default)
+- Tailwind CSS v4.2 ✅
+- Tailwind CSS v4.3 ✅ (default)
 
 All Tailwind CSS versions are now fully supported! You can switch between any version using `TWColors.setVersion()`.
 
@@ -23,7 +31,7 @@ All Tailwind CSS versions are now fully supported! You can switch between any ve
 
 ```yaml
 dependencies:
-    flutter_tailwind_colors: ^0.0.6
+    flutter_tailwind_colors: ^0.0.8
 ```
 
 2. Get the package via your IDE or via the command line by typing:
@@ -38,7 +46,7 @@ import 'package:flutter_tailwind_colors/flutter_tailwind_colors.dart';
 
 ## How to Use
 
-### Default Usage (v4.2)
+### Default Usage (v4.3)
 
 Tailwind Colors can be created and used in the same way as the usual Material color palette.
 
@@ -55,7 +63,7 @@ You can switch between different Tailwind CSS versions. **Version switching is g
 ```dart
 import 'package:flutter_tailwind_colors/flutter_tailwind_colors.dart';
 
-// Use default (v4.2)
+// Use default (v4.3)
 Color defaultColor = TWColors.blue.shade500;
 
 // Switch to a different version (affects ALL color access globally)
@@ -66,7 +74,7 @@ Color anotherColor = TWColors.emerald.shade400; // Also uses v3.4
 // Check current version
 print(TWColors.version); // TailwindVersion.v3_4
 
-// Switch back to latest (v4.2) - affects all subsequent color access
+// Switch back to latest (v4.3) - affects all subsequent color access
 TWColors.setVersion(TailwindVersion.latest);
 ```
 
@@ -127,10 +135,10 @@ return MaterialApp(
 
 ## Notes
 
-- By default, the package uses Tailwind CSS v4.2 colors
+- By default, the package uses Tailwind CSS v4.3 colors
 - **Version switching is global** - calling `TWColors.setVersion()` affects ALL color access throughout your entire application, across all files and widgets
 - It's recommended to set the version once during app initialization (e.g., in `main()`)
-- All Tailwind CSS versions (v2.0 through v4.2) are fully supported
+- All Tailwind CSS versions (v2.0 through v4.3) are fully supported
 - v2.0 uses different color names (blueGray, coolGray, trueGray, warmGray, lightBlue) but these are mapped to the v3+ names for compatibility
-- Tailwind CSS v4.2 adds the taupe, mauve, mist, and olive palettes
+- Tailwind CSS v4.2+ adds the taupe, mauve, mist, and olive palettes
 - The package maintains backwards compatibility - existing code will continue to work

@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 
 void main() {
   group('TWColors', () {
-    test('default version is v4.2', () {
-      expect(TWColors.version, TailwindVersion.v4_2);
+    test('default version is v4.3', () {
+      expect(TWColors.version, TailwindVersion.v4_3);
     });
 
     test('can switch versions', () {
@@ -20,6 +20,9 @@ void main() {
 
       TWColors.setVersion(TailwindVersion.v4_2);
       expect(TWColors.version, TailwindVersion.v4_2);
+
+      TWColors.setVersion(TailwindVersion.v4_3);
+      expect(TWColors.version, TailwindVersion.v4_3);
     });
 
     test('colors are MaterialColor instances', () {
@@ -124,12 +127,21 @@ void main() {
       expect(TWColors.mist, isA<MaterialColor>());
       expect(TWColors.olive, isA<MaterialColor>());
 
+      // Test v4.3
+      TWColors.setVersion(TailwindVersion.v4_3);
+      expect(TWColors.version, TailwindVersion.v4_3);
+      expect(TWColors.slate, isA<MaterialColor>());
+      expect(TWColors.taupe, isA<MaterialColor>());
+      expect(TWColors.mauve, isA<MaterialColor>());
+      expect(TWColors.mist, isA<MaterialColor>());
+      expect(TWColors.olive, isA<MaterialColor>());
+
       // Test latest
       TWColors.setVersion(TailwindVersion.latest);
-      expect(TWColors.version, TailwindVersion.v4_2);
+      expect(TWColors.version, TailwindVersion.v4_3);
 
       // Reset to default
-      TWColors.setVersion(TailwindVersion.v4_2);
+      TWColors.setVersion(TailwindVersion.v4_3);
     });
   });
 }

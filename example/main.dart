@@ -43,7 +43,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  TailwindVersion _selectedVersion = TailwindVersion.v4_2;
+  TailwindVersion _selectedVersion = TailwindVersion.v4_3;
 
   @override
   Widget build(BuildContext context) {
@@ -198,7 +198,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 borderRadius: BorderRadius.circular(8),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.1),
+                    color: Colors.black.withValues(alpha: 0.1),
                     blurRadius: 4,
                     offset: const Offset(0, 2),
                   ),
@@ -273,9 +273,9 @@ class _MyHomePageState extends State<MyHomePage> {
     return Container(
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.1),
+        color: color.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(8),
-        border: Border.all(color: color.withOpacity(0.3)),
+        border: Border.all(color: color.withValues(alpha: 0.3)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -315,8 +315,10 @@ class _MyHomePageState extends State<MyHomePage> {
         return 'v4.1';
       case TailwindVersion.v4_2:
         return 'v4.2';
+      case TailwindVersion.v4_3:
+        return 'v4.3';
       case TailwindVersion.latest:
-        return 'Latest (v4.2)';
+        return 'Latest (v4.3)';
     }
   }
 

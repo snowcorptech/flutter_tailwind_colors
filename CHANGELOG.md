@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.0.8] - 2026-08-22
+### Added
+- Tailwind CSS v4.3 support (`TailwindVersion.v4_3`)
+
+### Changed
+- Default Tailwind version updated from v4.2 to v4.3
+- `TailwindVersion.latest` now resolves to v4.3
+- Example app, tests, and documentation updated for v4.3 support
+
 ## [0.0.7] - 2026-04-19
 ### Fixed
 - Updated the example app's version switch to handle `v4.1` and `v4.2`

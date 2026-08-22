@@ -15,17 +15,17 @@ void main() {
       expect(TWColors.emerald, isA<MaterialColor>());
 
       // Change version globally
-      TWColors.setVersion(TailwindVersion.v4_2);
-      expect(TWColors.version, TailwindVersion.v4_2);
+      TWColors.setVersion(TailwindVersion.v4_3);
+      expect(TWColors.version, TailwindVersion.v4_3);
 
-      // Access same colors again - all should now use v4.2
+      // Access same colors again - all should now use v4.3
       expect(TWColors.slate, isA<MaterialColor>());
       expect(TWColors.blue, isA<MaterialColor>());
       expect(TWColors.emerald, isA<MaterialColor>());
 
       // The colors should be different instances (different versions)
       // Note: Since colors might have same values, we check the version instead
-      expect(TWColors.version, TailwindVersion.v4_2);
+      expect(TWColors.version, TailwindVersion.v4_3);
     });
 
     test('version persists across multiple color accesses', () {
@@ -65,13 +65,13 @@ void main() {
       expect(TWColors.version, TailwindVersion.v3_4);
 
       // Change version - affects all
-      TWColors.setVersion(TailwindVersion.v4_2);
+      TWColors.setVersion(TailwindVersion.v4_3);
 
       // All subsequent accesses use new version
       expect(TWColors.blue, isA<MaterialColor>());
       expect(TWColors.emerald, isA<MaterialColor>());
       expect(TWColors.rose, isA<MaterialColor>());
-      expect(TWColors.version, TailwindVersion.v4_2);
+      expect(TWColors.version, TailwindVersion.v4_3);
     });
   });
 }
